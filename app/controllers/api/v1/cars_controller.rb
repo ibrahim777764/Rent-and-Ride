@@ -13,7 +13,9 @@ class Api::V1::CarsController < ApplicationController
     if car
       render json: car, status: 200
     else
-      render json: car.errors, status: :unprocessable_entity
+      render json: {
+        error: "Car Not Found"
+      }
     end 
   end
 
