@@ -1,6 +1,4 @@
 class Car < ApplicationRecord
-  belongs_to :user
-
   validates :image, presence: true, length: { in: 0..250 }
   validates :name, presence: true, length: { in: 0..100 }
   validates :description, presence: true, length: { in: 0..350 }
