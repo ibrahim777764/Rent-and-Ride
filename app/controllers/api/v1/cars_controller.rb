@@ -1,4 +1,4 @@
-class Api::V1::CarsController < ApplicationController
+class Api::V1::CarsController < ApiController
   # GET /api/v1/cars
   # GET /api/v1/cars.json
   def index
