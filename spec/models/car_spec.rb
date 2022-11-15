@@ -44,5 +44,5 @@ RSpec.describe Car, type: :model do
       @car.duration = 0
       expect(@car).to_not be_valid
     end
- end
+  end
 end
