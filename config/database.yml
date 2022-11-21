@@ -24,8 +24,8 @@ default: &default
 development:
   <<: *default
   database: Rent_and_Ride_development
-  username: moraad
-  password: 23568900
+  username: postgres
+  password: 12
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,8 +58,8 @@ development:
 test:
   <<: *default
   database: Rent_and_Ride_test
-  username: moraad
-  password: 23568900
+  username: postgres
+  password: 12
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
