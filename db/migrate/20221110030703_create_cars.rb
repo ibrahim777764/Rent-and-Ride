@@ -8,8 +8,6 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.string :location
       t.integer :duration
       t.boolean :rented, default: false
-      t.references :user, null: true, foreign_key: true
-
       t.timestamps
     end
   end
