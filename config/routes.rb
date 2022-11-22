@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :cars
-      resources :users
+
+ root to: 'application#home' 
+  
+ namespace :api do
+  namespace :v1 do
+
+    resources :cars
+
+    resources :users, only: [:index, :create]
+    post '/login', to: 'auth#login'
+    get '/auto_login', to: 'auth#auto_login'
+    get '/user_is_authorized', to: 'auth#user_is_authorized'
     end
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  resources :users, param: :_username
-  post '/auth/login', to: 'authentication#login'
-  get '/*a', to: 'application#not_found'
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
