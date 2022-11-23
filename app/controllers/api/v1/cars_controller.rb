@@ -1,6 +1,4 @@
-class Api::V1::CarsController < ApplicationController
-  # GET /api/v1/cars
-  # GET /api/v1/cars.json
+class Api::V1::CarsController < ActionController::API
   def index
     cars = Car.all
     render json: cars, status: 200

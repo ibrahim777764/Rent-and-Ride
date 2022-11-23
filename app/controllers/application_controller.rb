@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
-  before_action :require_login
-  skip_before_action :require_login, only: [:home]
+    
+    before_action :require_login
+    skip_before_action :require_login, only: [:home]
 
   def home
       render json: {message: "Server is up and running!"}
