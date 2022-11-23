@@ -13,3 +13,6 @@ Car.create([
   {name: 'V30', image: 'w0VIBAE', description: 'Efficiency-Hybrid system seamlessly shifts between IC/electric power, 18kmpl overall and Spacious - Comfortable and supportive seats, roomy, good quality cabin materials', price: 450.35, location: 'Kigali', duration: 2    },
   {name: 'MPG Honda', image: '2FAAAABAJ', description: 'It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.', price: 400.45, location: 'Istanbul', duration: 2    }
 ])
+
+User.create(name: 'tom', username: 'tomson', email: 'tom@gmail.com', password_digest: "1234567")
+User.create(name: 'Radd', username: 'Raadson', email: 'Rad@gmail.com', password_digest: "1234594897")
