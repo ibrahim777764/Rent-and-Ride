@@ -1,4 +1,7 @@
-class Api::V1::CarsController < ActionController::API
+class Api::V1::CarsController < ApiController
+  # GET /api/v1/cars
+  # GET /api/v1/cars.json
+  before_action :authorize_request
   def index
     cars = Car.all
     render json: cars, status: 200
