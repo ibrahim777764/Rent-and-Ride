@@ -1,9 +1,9 @@
 class AuthenticationTokenService
   HMAC_SECRET = Rails.application.secrets.secret_key_base
-  ALGORITHM_TYPE = 'HS256'
+  ALGORITHM_TYPE = 'HS256'.freeze
 
   def self.encode(id)
-    payload={user_id: id}
+    payload = { user_id: id }
     JWT.encode(payload, HMAC_SECRET, ALGORITHM_TYPE)
   end
 
