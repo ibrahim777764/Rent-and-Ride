@@ -1,6 +1,5 @@
-class Api::V1::UsersController < ApplicationController
-  skip_before_action :require_login
-
+class Api::V1::UsersController < ApiController
+  before_action :authorize_request, except: [:create]
   def index
     users = User.all
     render json: {
@@ -13,11 +12,12 @@ class Api::V1::UsersController < ApplicationController
     # byebug
     if user.valid?
       payload = { user_id: user.id }
-      token = encode_token(payload)
+      token = AuthenticationTokenService.encode(payload)
       render json: {
         status: :created,
         user:,
-        jwt: token
+        jwt: token,
+        current_user: true
       }
     else
       render json: {
