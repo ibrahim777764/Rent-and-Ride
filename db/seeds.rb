@@ -6,13 +6,17 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Car.create(name: "BMW", image: "img", description:"desc",price: 100,location:"LONDON",duration: 5)
-Car.create(name: "bb", image: "img2", description:"desc2",price: 200,location:"LONDON",duration: 22)
-Car.create(name: "ee", image: "img3", description:"desc3",price: 300,location:"LONDON",duration: 45)
+User.destroy_all
+Car.destroy_all
+
+
+Car.create(name: "BMW", image: "https://i.pinimg.com/564x/cf/fc/6d/cffc6d43b120740375767c320e0dadb7.jpg", description:"It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.",price: 100,location:"LONDON",duration: 5)
+Car.create(name: "Lamborghini", image: "https://i.pinimg.com/564x/ab/40/73/ab407368e68ac35ea869874691931dba.jpg", description:"It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.",price: 200,location:"LONDON",duration: 22)
+Car.create(name: "Ferrari", image: "https://i.pinimg.com/564x/b2/57/83/b2578300e131a7864604daabf9e39cd9.jpg", description:"It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.",price: 300,location:"LONDON",duration: 45)
 Car.create([
-  {name: 'V30', image: 'w0VIBAE', description: 'Efficiency-Hybrid system seamlessly shifts between IC/electric power, 18kmpl overall and Spacious - Comfortable and supportive seats, roomy, good quality cabin materials', price: 450.35, location: 'Kigali', duration: 2    },
-  {name: 'MPG Honda', image: '2FAAAABAJ', description: 'It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.', price: 400.45, location: 'Istanbul', duration: 2    }
+  {name: 'Toyota Xtra', image: 'https://i.pinimg.com/564x/93/d8/9c/93d89c1f9e8c3f3edc1aa268b862246c.jpg', description: 'It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.', price: 450.35, location: 'Kigali', duration: 2    },
+  {name: 'Ford Mustang', image: 'https://i.pinimg.com/564x/0d/63/a5/0d63a5525c3f833f6f58418e9d69db5f.jpg', description: 'It has a stellar combination of cargo and passenger space, safety and reliability ratings, positive reviews from automotive journalists, and available family-friendly features.', price: 400.45, location: 'Istanbul', duration: 2    }
 ])
 
-User.create(name: 'tom', username: 'tomson', email: 'tom@gmail.com', password_digest: "1234567")
-User.create(name: 'Radd', username: 'Raadson', email: 'Rad@gmail.com', password_digest: "1234594897")
+
+User.create(name: "John", email: "a@gmail.com", password: "123456", password_confirmation: "123456")
